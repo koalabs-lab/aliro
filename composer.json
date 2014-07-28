@@ -1,0 +1,23 @@
+{
+    "name": "koalabs/aliro",
+    "description": "",
+    "authors": [
+        {
+            "name": "Koalabs",
+            "email": "carlos@koalabs.co"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Koalabs\\Aliro\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
