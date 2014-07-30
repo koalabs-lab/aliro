@@ -14,7 +14,7 @@ class User extends Model implements UserInterface {
    *
    * @var string
    */
-  protected $table = Config::get('aliro::users.table');
+  protected $table = 'users';
 
   /**
    * The attributes excluded from the model's JSON form.
