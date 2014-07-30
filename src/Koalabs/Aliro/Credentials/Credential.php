@@ -1,5 +1,6 @@
 <?php namespace Koalabs\Aliro\Credentials;
 
+use Config;
 use Illuminate\Database\Eloquent\Model;
 
 class Credential extends Model implements CredentialInterface {
