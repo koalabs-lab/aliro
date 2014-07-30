@@ -2,12 +2,12 @@
 
 use Config;
 use Illuminate\Database\Eloquent\Model;
-use Koalabs\Aliro\Users\Traits\AuthTrait;
+use Koalabs\Aliro\Users\Traits\CredentialTrait;
 use Koalabs\Aliro\Users\Traits\RemindableTrait;
 
 class User extends Model implements UserInterface {
 
-  use AuthTrait, RemindableTrait;
+  use CredentialTrait, RemindableTrait;
 
   /**
    * The database table used by the model.
@@ -29,25 +29,5 @@ class User extends Model implements UserInterface {
    * @var array
    */
   protected $fillable = ['email', 'firstname', 'lastname'];
-
-  /**
-   * The Credential Relationship
-   *
-   * @return Koalabs\Aliro\Credentials\Credential
-   */
-  public function credential()
-  {
-    return $this->hasOne('Koalabs\Aliro\Credentials\Credential');
-  }
-
-  /**
-   * The Roles Relationship
-   *
-   * @return Koalabs\Aliro\Roles\Role
-   */
-  public function roles()
-  {
-    return $this->hasOne(Config::get('aliro::roles.model'));
-  }
 
 }

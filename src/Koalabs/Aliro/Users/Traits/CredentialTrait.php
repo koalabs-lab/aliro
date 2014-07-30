@@ -1,6 +1,16 @@
 <?php namespace Koalabs\Aliro\Users\Traits;
 
-trait AuthTrait {
+trait CredentialTrait {
+
+  /**
+   * The Credential Relationship
+   *
+   * @return Koalabs\Aliro\Credentials\Credential
+   */
+  public function credential()
+  {
+    return $this->hasOne('Koalabs\Aliro\Credentials\Credential');
+  }
 
   /**
    * Get the unique identifier for the user.
