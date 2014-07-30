@@ -36,54 +36,18 @@ return array(
 
     'model' => 'Koalabs/Aliro/Users/User',
 
-  ],
-
-  /*
-  |--------------------------------------------------------------------------
-  | Roles
-  |--------------------------------------------------------------------------
-  |
-  | Configuration specific to the role management.
-  |
-  */
-
-  'roles' => [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Roles Table
-    |--------------------------------------------------------------------------
-    |
-    | Here you can specify the name of the table for storing your roles.
-    | 'roles' is a pretty safe default.
-    |
-    */
-
-    'table' => 'roles',
-
     /*
     |--------------------------------------------------------------------------
     | Pivot Table
     |--------------------------------------------------------------------------
     |
-    | Here you can specify the name of the pivot table.
-    | It's a convention to use the singular version of the other tables.
+    | Here you can specify the name of the pivot table for relating users to roles.
+    | It's a convention to use the singular version of the two tables.
     |
     */
 
     'pivot_table' => 'role_user',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Eloquent Role Model
-    |--------------------------------------------------------------------------
-    |
-    | You can choose the Eloquent model to be used for your roles.
-    | Role is a very safe bet.
-    |
-    */
-
-    'model' => 'Koalabs/Aliro/Roles/Role',
   ]
 
 );

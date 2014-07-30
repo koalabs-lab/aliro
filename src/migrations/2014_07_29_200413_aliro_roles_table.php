@@ -14,7 +14,7 @@ class AliroRolesTable extends Migration {
 
 	public function __construct()
 	{
-		$this->table = Config::get('aliro::roles.table');
+		$this->table = 'roles';
 	}
 
 	/**
@@ -24,7 +24,7 @@ class AliroRolesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create($this->table, function($table)
+		Schema::create($this->table, function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('name')->unique();

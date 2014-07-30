@@ -4,10 +4,11 @@ use Config;
 use Illuminate\Database\Eloquent\Model;
 use Koalabs\Aliro\Users\Traits\CredentialTrait;
 use Koalabs\Aliro\Users\Traits\RemindableTrait;
+use Koalabs\Aliro\Users\Traits\RoleTrait;
 
 class User extends Model implements UserInterface {
 
-  use CredentialTrait, RemindableTrait;
+  use CredentialTrait, RemindableTrait, RoleTrait;
 
   /**
    * The database table used by the model.

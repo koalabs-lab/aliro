@@ -3,7 +3,7 @@
 use Config;
 use Illuminate\Database\Eloquent\Model;
 
-class Role implements RoleInterface {
+class Role extends Model implements RoleInterface {
 
   /**
    * The database table used by the model.
@@ -13,13 +13,22 @@ class Role implements RoleInterface {
   protected $table = 'roles';
 
   /**
+   * The fields fillable via mass assignment
+   *
+   * @var array
+   */
+  protected $fillable = ['name'];
+
+  /**
    * The User Relationship
    *
    * @return Koalabs\Aliro\Users\User
    */
   public function users()
   {
-    return $this->belongsToMany(Config::get('aliro::users.model'));
+    $config = Config::get('aliro::users');
+
+    return $this->belongsToMany($config['table'], $config['pivot_table']);
   }
 
 }

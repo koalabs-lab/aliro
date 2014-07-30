@@ -16,9 +16,9 @@ class AliroRoleUserTable extends Migration {
 
 	public function __construct()
 	{
-		$this->table = Config::get('aliro::roles.pivot_table');
+		$this->table = Config::get('aliro::users.pivot_table');
 		$this->users_table = Config::get('aliro::users.table');
-		$this->roles_table = Config::get('aliro::roles.table');
+		$this->roles_table = 'roles';
 	}
 
 	/**

@@ -1,5 +1,7 @@
 <?php namespace Koalabs\Aliro\Users\Traits;
 
+use Config;
+
 trait RoleTrait {
 
   /**
@@ -9,7 +11,9 @@ trait RoleTrait {
    */
   public function roles()
   {
-    return $this->belongsToMany(Config::get('aliro::roles.model'));
+    $config = Config::get('aliro::users');
+
+    return $this->belongsToMany('roles', $config['pivot_table']);
   }
-  
+
 }
