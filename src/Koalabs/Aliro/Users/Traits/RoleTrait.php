@@ -13,7 +13,7 @@ trait RoleTrait {
   {
     $config = Config::get('aliro::users');
 
-    return $this->belongsToMany('roles', $config['pivot_table']);
+    return $this->belongsToMany('Koalabs\Aliro\Roles\Role', $config['pivot_table']);
   }
 
 }
