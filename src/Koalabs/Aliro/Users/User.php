@@ -14,7 +14,7 @@ class User extends Model implements UserInterface {
    *
    * @var string
    */
-  protected $table = 'users';
+  protected $table = Config::get('aliro::users.table');
 
   /**
    * The attributes excluded from the model's JSON form.
@@ -33,11 +33,21 @@ class User extends Model implements UserInterface {
   /**
    * The Credential Relationship
    *
-   * @return Illuminate\Database\Eloquent\Model
+   * @return Koalabs\Aliro\Credentials\Credential
    */
   public function credential()
   {
-    return $this->hasOne(Config::get('Koalabs\Aliro\Credentials\Credential'));
+    return $this->hasOne('Koalabs\Aliro\Credentials\Credential');
+  }
+
+  /**
+   * The Roles Relationship
+   *
+   * @return Koalabs\Aliro\Roles\Role
+   */
+  public function roles()
+  {
+    return $this->hasOne(Config::get('aliro::roles.model'));
   }
 
 }

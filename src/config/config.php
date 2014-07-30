@@ -72,6 +72,18 @@ return array(
     */
 
     'pivot_table' => 'role_user',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Eloquent Role Model
+    |--------------------------------------------------------------------------
+    |
+    | You can choose the Eloquent model to be used for your roles.
+    | Role is a very safe bet.
+    |
+    */
+
+    'model' => 'Koalabs/Aliro/Roles/Role',
   ]
 
 );
