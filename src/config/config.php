@@ -36,30 +36,6 @@ return array(
 
     'model' => 'Koalabs/Aliro/Users/User',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Credentials Table
-    |--------------------------------------------------------------------------
-    |
-    | Here you can specify the name of the table for storing your users' credentials.
-    | 'credentials' is a pretty safe default.
-    |
-    */
-
-    'credentials_table' => 'credentials',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Eloquent Credential Model
-    |--------------------------------------------------------------------------
-    |
-    | You can choose the Eloquent model to be used for your credentials.
-    |
-    */
-
-    'credentials_model' => 'Koalabs\Aliro\Credentials\Credential'
-
-
   ],
 
   /*

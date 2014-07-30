@@ -14,7 +14,7 @@ class AliroCredentialsTable extends Migration {
 
 	public function __construct()
 	{
-		$this->table = Config::get('aliro::users.credentials_table');
+		$this->table = 'credentials';
 	}
 
 	/**

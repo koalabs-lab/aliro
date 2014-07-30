@@ -37,7 +37,7 @@ class User extends Model implements UserInterface {
    */
   public function credential()
   {
-    return $this->hasOne(Config::get('aliro::users.credentials_model'));
+    return $this->hasOne(Config::get('Koalabs\Aliro\Credentials\Credential'));
   }
 
 }
