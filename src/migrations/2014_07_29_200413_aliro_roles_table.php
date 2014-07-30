@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AliroUsersTable extends Migration {
+class AliroRolesTable extends Migration {
 
 	/**
 	 * The table name for the migration
@@ -14,7 +14,7 @@ class AliroUsersTable extends Migration {
 
 	public function __construct()
 	{
-		$this->table = Config::get('aliro::users.table');
+		$this->table = Config::get('aliro::roles.table');
 	}
 
 	/**
@@ -26,16 +26,9 @@ class AliroUsersTable extends Migration {
 	{
 		Schema::create($this->table, function($table)
 		{
-			$table->engine = 'InnoDB';
-
 			$table->increments('id');
-			$table->string('email');
-			$table->boolean('active')->default(0);
-			$table->string('firstname')->nullable();
-			$table->string('lastname')->nullable();
+			$table->string('name')->unique();
 			$table->timestamps();
-
-			$table->unique('email');
 		});
 	}
 
