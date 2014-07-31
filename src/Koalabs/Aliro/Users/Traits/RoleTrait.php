@@ -36,7 +36,7 @@ trait RoleTrait {
   /**
    * Assign a role to the user
    *
-   * @param mixed  $role
+   * @param  mixed  $role
    * @return void
    */
   public function assignRole($role)
