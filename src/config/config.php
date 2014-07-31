@@ -34,7 +34,7 @@ return array(
     |
     */
 
-    'model' => 'Koalabs/Aliro/Users/User',
+    'model' => 'Koalabs\Aliro\Users\User',
 
     /*
     |--------------------------------------------------------------------------
